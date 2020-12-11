@@ -17,9 +17,9 @@
                         {{ __('Tweets') }}
                     </x-jet-nav-link>
                
-                    <x-jet-nav-link href="{{ route('users.list') }}" :active="request()->routeIs('users.list')">
+                    {{-- <x-jet-nav-link href="{{ route('users.list') }}" :active="request()->routeIs('users.list')">
                         {{ __('Usuários') }}
-                    </x-jet-nav-link>
+                    </x-jet-nav-link> --}}
                 
                 
                     <x-jet-nav-link href="{{ route('links.index') }}" :active="request()->routeIs('links.index')">
@@ -67,6 +67,11 @@
                             {{ __('Avatar') }}
                         </x-jet-dropdown-link>
 
+                        <div class="border-t border-gray-100"></div>
+
+                        <x-jet-dropdown-link href="{{ route('users.list') }}">
+                            {{ __('Gerenciar Usuários') }}
+                        </x-jet-dropdown-link>
                         
 
                         @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

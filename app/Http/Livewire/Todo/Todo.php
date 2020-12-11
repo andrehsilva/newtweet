@@ -49,10 +49,9 @@ class Todo extends Component
 
         $this->title = null;
         $this->modalFormVisible = false;
-        
         session()->flash('success', 'Tarefa cadastrada com sucesso!');
         
-        //return redirect();
+        
     }
 
 

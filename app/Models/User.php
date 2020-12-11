@@ -81,6 +81,15 @@ class User extends Authenticatable
         return $this->profile_photo_path;
     }
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
 
     public static function search($search)
     {

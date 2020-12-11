@@ -45,14 +45,7 @@ class UsersTable extends Component
 
     public function create()
     {
-       /*  $this->validate();
-        auth()->user()->links()->create([
-            'name' => $this->name,
-            'link' => $this->link,]);
-        $this->modalFormVisible = false;
-        $this->reset();
-        session()->flash('success', 'Link cadastrado com sucesso!'); */
-        
+      
 
         $this->validate();
         $this->password = $this->email;
@@ -83,6 +76,7 @@ class UsersTable extends Component
     public function update()
     {
         $this->validate();
+    
         User::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
         session()->flash('message', 'Usuário atualizado com sucesso!'); 
@@ -93,7 +87,7 @@ class UsersTable extends Component
     {
         $users = User::find($this->modelId);
         $this->name = $users->name;
-        $this->email = $users->email;
+        $this->email = $users->email; 
         $this->password = $users->password;
     }
 

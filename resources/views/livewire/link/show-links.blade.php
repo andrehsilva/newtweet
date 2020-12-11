@@ -74,8 +74,8 @@
                    
                     <a href="#"   wire:click.prevent="remove({{$link->id}})"
                     class="button delete-confirm px-2 py-2 bg-red-500 text-white">Remover</a> --}}
-                    <a class="flex-shrink-0 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded m-2" href="{{ $link->link }}" target="_blank">
-                        {{ __('Abrir') }}
+                    <a class="flex-shrink-0 bg-blue-500 hover:bg-blue-700 rounded-md border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-3 rounded m-1" href="{{ $link->link }}" target="_blank">
+                        {{ __('ABRIR') }}
                     </a>
                     <x-jet-button wire:click="updateShowModal({{ $link->id }})">
                         {{ __('Editar') }}
