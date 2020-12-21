@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Category\Category;
+use App\Http\Livewire\Git\Github;
 use App\Http\Livewire\Link\EditLinks;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +41,14 @@ Route::get('/links/edit/{id}', ShowLinks::class, 'editLinkModal')->name('links.e
 
 Route::get('/todo', Todo::class)->name('todo.index')->middleware('auth');
 
+Route::get('/categories', Category::class)->name('categories.index')->middleware('auth');
+
+Route::get('/git', Github::class)->name('git.index')->middleware('auth');
+
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+

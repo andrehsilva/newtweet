@@ -29,7 +29,20 @@
                     <x-jet-nav-link href="{{ route('todo.index') }}" :active="request()->routeIs('todo.index')">
                         {{ __('Tarefas') }}
                     </x-jet-nav-link>
+
+                   {{--  <x-jet-nav-link href="{{ route('git.index') }}" :active="request()->routeIs('git.index')">
+                        {{ __('Github') }}
+                    </x-jet-nav-link> --}}
+
+                    <x-jet-nav-link href="{{ route('categories.index') }}" :active="request()->routeIs('categories.index')">
+                        {{ __('Categorias') }}
+                    </x-jet-nav-link>
+                    
+
+                    
                 </div>
+
+                
             </div>
 
             <!-- Settings Dropdown -->
